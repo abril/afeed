@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
-  def index
+  def index     
     
+     @materias = Domain::Materia.all
+     debugger
   end
 end

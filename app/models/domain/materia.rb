@@ -11,17 +11,17 @@ module Domain
     end                  
     
     def self.entry_point
-      "http://#{EDITORIAL_DOMAIN_HOST}/materias"                                                                
+      "http://#{EDITORIAL_DOMAIN_HOST}/materias/busca"                                                                
     end
 
     def self.resource_name
-      "materias"
+      "materia"
     end
     
     def self.all
-      result = []
-      get!.resource.materias.each do |item|
-        result << Materia.new(get!(item[:id]))
+      result = []  
+      get!.resource.resultado.each do |item|           
+        result << Materia.new(Restfulie.at(item.id).get.resource)
       end
       return result
     end
