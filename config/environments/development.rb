@@ -28,4 +28,6 @@ Afeed::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
+  EDITORIAL_DOMAIN_HOST = "stage.editorial.api.abril.com.br"
 end
