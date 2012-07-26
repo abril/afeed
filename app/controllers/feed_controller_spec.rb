@@ -1,4 +1,4 @@
-class HomeController < ApplicationController
+class FeedController < ApplicationController
   def index     
     
      @materias = Domain::Materia.all

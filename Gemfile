@@ -5,7 +5,7 @@ gem 'rails', '3.2.6'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'restfulie', '~> 1.0.0'
+gem 'restfolia', :git => 'http://github.com/rogerleite/restfolia.git'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -40,12 +40,12 @@ gem 'jquery-rails'
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'ruby-debug'    
 end
 
 group :test do
   gem 'capybara'
   gem 'vcr'
   gem 'fakeweb'
-  gem 'capybara-mechanize'
   gem 'guard-rspec'
 end

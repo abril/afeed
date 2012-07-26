@@ -1,3 +1,10 @@
+GIT
+  remote: http://github.com/rogerleite/restfolia.git
+  revision: 84609a83c07c82a44e5189ccce1d04e172d68aad
+  specs:
+    restfolia (1.0.4)
+      multi_json (~> 1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -38,9 +45,6 @@ GEM
       rack-test (>= 0.5.4)
       selenium-webdriver (~> 2.0)
       xpath (~> 0.1.4)
-    capybara-mechanize (0.3.0)
-      capybara (~> 1.1)
-      mechanize (~> 2.3)
     childprocess (0.3.3)
       ffi (~> 1.0.6)
     coffee-rails (3.2.2)
@@ -50,10 +54,9 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.3.3)
+    columnize (0.3.6)
     commonjs (0.2.6)
     diff-lcs (1.1.3)
-    domain_name (0.5.3)
-      unf (~> 0.0.3)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -65,16 +68,12 @@ GEM
     guard-rspec (1.1.0)
       guard (>= 1.1)
     hike (1.2.1)
-    hypertemplate (1.2.2)
-      json_pure
-      nokogiri
     i18n (0.6.0)
     journey (1.0.4)
     jquery-rails (2.0.2)
       railties (>= 3.2.0, < 5.0)
       thor (~> 0.14)
     json (1.7.3)
-    json_pure (1.7.3)
     less (2.2.1)
       commonjs (~> 0.2.6)
     less-rails (2.2.3)
@@ -83,6 +82,8 @@ GEM
     libv8 (3.3.10.4)
     libwebsocket (0.1.3)
       addressable
+    linecache (0.46)
+      rbx-require-relative (> 0.0.4)
     listen (0.4.7)
       rb-fchange (~> 0.0.5)
       rb-fsevent (~> 0.9.1)
@@ -91,32 +92,13 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    mechanize (2.5.1)
-      domain_name (~> 0.5, >= 0.5.1)
-      mime-types (~> 1.17, >= 1.17.2)
-      net-http-digest_auth (~> 1.1, >= 1.1.1)
-      net-http-persistent (~> 2.5, >= 2.5.2)
-      nokogiri (~> 1.4)
-      ntlm-http (~> 0.1, >= 0.1.1)
-      webrobots (~> 0.0, >= 0.0.9)
-    medie (1.0.0)
-      actionpack (>= 3.0.0)
-      activesupport
-      json_pure
-      methodize
-    methodize (0.2.2)
     mime-types (1.19)
     multi_json (1.3.6)
-    net-http-digest_auth (1.2.1)
-    net-http-persistent (2.7)
     nokogiri (1.5.5)
-    ntlm-http (0.1.1)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
       rack (>= 0.4)
-    rack-conneg (0.1.5)
-      rack (>= 1.0)
     rack-ssl (1.3.2)
       rack
     rack-test (0.6.1)
@@ -142,17 +124,9 @@ GEM
     rb-fsevent (0.9.1)
     rb-inotify (0.8.8)
       ffi (>= 0.5.0)
+    rbx-require-relative (0.0.9)
     rdoc (3.12)
       json (~> 1.4)
-    respondie (0.9.0)
-    restfulie (1.0.3)
-      hypertemplate (~> 1.2.0)
-      json_pure (>= 1.2.4)
-      medie (~> 1.0.0)
-      nokogiri (>= 1.4.2)
-      rack-conneg
-      respondie (~> 0.9.0)
-      sqlite3-ruby
     rspec (2.10.0)
       rspec-core (~> 2.10.0)
       rspec-expectations (~> 2.10.0)
@@ -166,6 +140,11 @@ GEM
       activesupport (>= 3.0)
       railties (>= 3.0)
       rspec (~> 2.10.0)
+    ruby-debug (0.10.4)
+      columnize (>= 0.1)
+      ruby-debug-base (~> 0.10.4.0)
+    ruby-debug-base (0.10.4)
+      linecache (>= 0.3)
     rubyzip (0.9.9)
     sass (3.1.20)
     sass-rails (3.2.5)
@@ -181,9 +160,6 @@ GEM
       hike (~> 1.2)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    sqlite3 (1.3.6)
-    sqlite3-ruby (1.3.3)
-      sqlite3 (>= 1.3.3)
     therubyracer (0.10.1)
       libv8 (~> 3.3.10)
     thor (0.15.4)
@@ -200,11 +176,7 @@ GEM
     uglifier (1.2.6)
       execjs (>= 0.3.0)
       multi_json (~> 1.3)
-    unf (0.0.5)
-      unf_ext
-    unf_ext (0.0.5)
     vcr (2.2.2)
-    webrobots (0.0.13)
     xpath (0.1.4)
       nokogiri (~> 1.3)
 
@@ -213,15 +185,15 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
-  capybara-mechanize
   coffee-rails (~> 3.2.1)
   fakeweb
   guard-rspec
   jquery-rails
   less-rails
   rails (= 3.2.6)
-  restfulie (~> 1.0.0)
+  restfolia!
   rspec-rails
+  ruby-debug
   sass-rails (~> 3.2.3)
   twitter-bootstrap-rails
   uglifier (>= 1.0.3)

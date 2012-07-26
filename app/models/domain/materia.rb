@@ -1,36 +1,16 @@
 module Domain
-  class Materia
-    include Restfulie::Client::Base
-    
-    def initialize(materia)
-      @materia = materia
-    end            
-    
-    def get(attribute)
-      @materia[attribute]
-    end                  
-    
+  class Materia  
+                       
     def self.entry_point
       "http://#{EDITORIAL_DOMAIN_HOST}/materias/busca"                                                                
     end
-
-    def self.resource_name
-      "materia"
-    end
     
     def self.all
-      result = []  
-      get!.resource.resultado.each do |item|           
-        result << Materia.new(Restfulie.at(item.id).get.resource)
+      result = []
+      Restfolia.at(entry_point).get.resultado.each do |item| 
+        result << Restfolia.at(item.id).get
       end
-      return result
-    end
-
-    uses_restfulie do |config|
-      config.entry_point = entry_point
-      config.default_headers = {
-        :get => {'Accept' => 'application/json'}
-      }
+      result
     end
 
   end
